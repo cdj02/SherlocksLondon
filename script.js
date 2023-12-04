@@ -117,7 +117,7 @@ locations.forEach((location) => {
   markersLayer.addLayer(marker);
 });
 
-// Add the leaflet-search control
+// Add the leaflet-search control with custom options
 L.control.search({
   layer: markersLayer,
   propertyName: 'title',
@@ -125,6 +125,12 @@ L.control.search({
     // Set the map view to the found location
     map.setView(latlng, 15);
   },
+  zoom: 16, // Zoom level for found location
+  initial: false, // Whether the search bar is initially expanded
+  textPlaceholder: 'Search places, people, stories...', // Custom placeholder text
+  textErr: 'Location Not Found', // Custom error message
+  collapsed: false, // Always expand the search bar
+  position: 'topright', // Position the search bar in the top right corner
 }).addTo(map);
 
 // Event handler for zoomend event
