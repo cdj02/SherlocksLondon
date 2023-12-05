@@ -4,33 +4,85 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sherlock Holmes Map</title>
-  <!-- Include Leaflet CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <!-- Include leaflet-search CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet-search/dist/leaflet-search.min.css" />
   <style>
-    /* Set the height of the map container to 100vh (100% of viewport height) */
-    #map {
+    body {
+      background-image: url('images/bg_1.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #5C3A21;
+      font-family: 'Times New Roman', serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       height: 100vh;
     }
 
-    /* Remove the height restriction on the body and html elements */
-    body, html {
-      height: auto;
-      margin: 0;
-      padding: 0;
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      margin: 20px 0;
+    }
+
+    p {
+      text-align: center;
+      max-width: 800px;
+      margin: 10px;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    /* Larger button size */
+    a button {
+      font-size: 24px;
+      padding: 15px 30px;
+      margin-top: 20px;
+    }
+
+    /* Quotes section */
+    .quotes {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .quote {
+      font-style: italic;
+      font-size: 20px;
+      margin-bottom: 10px;
     }
   </style>
 </head>
 <body>
-  <!-- The map container -->
-  <div id="map"></div>
+  <h1>Sherlock's Literary London</h1>
+  <p>Welcome Sherlock enthusiasts or anyone that stops by!</p>
+  <p>
+    Here we provide a Sherlock map of London, where you could explore 
+     the locations that Sherlock Holmes, and of course Dr. Watson used 
+     to wander around!
+  </p>
 
-  <!-- Include Leaflet JavaScript -->
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <!-- Include leaflet-search JavaScript -->
-  <script src="https://unpkg.com/leaflet-search/dist/leaflet-search.min.js"></script>
-  <!-- Your custom JavaScript file -->
-  <script src="script.js"></script>
+  <p>
+    Curious about what the real scenes look like? You came to the right place!
+  </p>
+
+  <p>
+    Want to know more about the crimes? You may gain the first-hand info from the witnesses and policemen on the scene!
+  </p>
+
+  <!-- Sherlock Holmes Quotes -->
+  <div class="quotes">
+    <div class="quote">"Come, Watson, come! The game is afoot. Not a word! Into your clothes and come!"</div>
+    <!-- Add more quotes as needed -->
+  </div>
+
+  <!-- Larger map button -->
+  <a href="map.html">
+    <button>Go to Map</button>
+  </a>
+
+  <!-- Your additional homepage content goes here if needed -->
 </body>
 </html>
