@@ -64,8 +64,8 @@ const locations = [
   
   var markersLayer = new L.FeatureGroup(); // Layer containing searched elements
   
-  // Create crime scene markers and add them to the map
-  const crimeMarkers = crimeScenes.map((scene) => {
+// Create crime scene markers and add them to the map
+const crimeMarkers = crimeScenes.map((scene) => {
     const marker = L.marker(scene.coordinates, {
       opacity: 0,
       zIndexOffset: 1000,
@@ -73,7 +73,7 @@ const locations = [
       icon: L.divIcon({
         className: 'crime-marker',
         iconSize: [30, 30],
-        html: `<div>${scene.type === 'police' ? '👮' : '👤'}</div>`, // Use emoji or text as desired
+        html: `<div>${scene.type === 'police' ? '<img src="https://www.svgrepo.com/show/35009/policeman.svg" alt="Police Man" width="30" height="30">' : '<img src="https://www.svgrepo.com/show/34968/maid.svg" alt="Witness" width="30" height="30">'}</div>`, // Use SVG files
       }),
     });
   
@@ -84,6 +84,7 @@ const locations = [
   
     return marker;
   });
+  
   
   // Add a custom CSS class for crime markers
   const style = document.createElement('style');
@@ -154,3 +155,6 @@ const locations = [
     // Navigate to the index.html page
     window.location.href = 'index.html';
   }
+
+  // Create the legend control
+const legend = L.control({ position: 'topright' });

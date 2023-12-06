@@ -68,6 +68,35 @@
       overflow: hidden; /* Prevent scrolling when the map is dragged */
     }
 
+    /* Legend styles */
+    #legend {
+      position: fixed;
+      top: 80px; /* Adjust the top position based on your header height */
+      right: 20px;
+      background-color: white;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
+    }
+
+    .legend-marker {
+      width: 20px;
+      height: 20px;
+      margin-right: 5px;
+      border: 1px solid #ccc;
+    }
+
+    
+
+
     /* Optionally, add some animation to the banner */
     @keyframes fadeInDown {
       from {
@@ -102,6 +131,30 @@
 
   <!-- The map container -->
   <div id="map"></div>
+
+<!-- Legend -->
+<div id="legend">
+  <h4>Legend</h4>
+  <div class="legend-item">
+    <div class="legend-marker" style="background-color: #2e539e;"></div>
+    <span>Location</span>
+  </div>
+  <div class="legend-item">
+    <div class="legend-marker" style="background-color: #cf3b3b;"></div>
+    <span>Crime Scene</span>
+  </div>
+  <div class="legend-item">
+    <div class="legend-marker"><img src="https://www.svgrepo.com/show/35009/policeman.svg" alt="Police Man" width="20" height="20"></div>
+    <span>Police Man</span>
+  </div>
+  <div class="legend-item">
+    <div class="legend-marker"><img src="https://www.svgrepo.com/show/34968/maid.svg" alt="Witness" width="20" height="20"></div>
+    <span>Witness</span>
+  </div>
+  <!-- Add more legend items as needed -->
+</div>
+
+
 
   <!-- Include Leaflet JavaScript -->
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
