@@ -1,46 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sherlock Holmes Map</title>
+  <title>Sherlock's Literary London</title>
   <!-- Include Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <!-- Include leaflet-search CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet-search/dist/leaflet-search.min.css" />
+  <!-- Font Awesome for icons (you can include it in your project or use a CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy8tsILt4Q7P4MQTgPD6jRq2EPgJLQRO8" crossorigin="anonymous">
   <style>
     /* Set the height of the map container to 100vh (100% of viewport height) */
     #map {
-      height: 100vh;
+      height: calc(100vh - 0px); /* Adjust the height based on the header/banner height */
     }
 
-    /* Remove the height restriction on the body and html elements */
-    body, html {
-      height: auto;
-      margin: 0;
-      padding: 0;
+    /* Header/banner styles */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 80px; /* Adjust the height as needed */
+      background: rgba(206, 191, 143, 0.8); /* Semi-transparent background color */
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 60px;
+      z-index: 1000;
+      font-family: 'Arial', sans-serif; /* Use a modern font */
     }
 
-      /* Style for the home button */
-      #home-button {
-      position: absolute;
-      top: 70px;
-      right: 10px;
-      z-index: 1001;
-      background-color: #fff;
-      padding: 10px;
-      border: 1px solid #ccc;
+    /* Style for the home button */
+    #home-button {
+      order: -1; /* Move the home button to the left */
+      background-color: #4d301e; /* Dark brown background color */
+      color: #fff; /* White text color */
+      padding: 10px 20px; /* Padding for better appearance */
+      border: none;
       cursor: pointer;
       font-weight: bold;
+      border-radius: 5px; /* Add a slight border-radius for a rounded look */
+      transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    }
+
+    /* Style for the Sherlock Holmes text */
+    #sherlock-text {
+      color: #4d301e; /* Adjust the color as needed */
+      font-size: 24px;
+      font-weight: bold;
+      margin-right: 1025px;
+    }
+
+    /* Custom Zoom Control */
+    .custom-zoom-control {
+      display: flex;
+      gap: 10px; /* Adjust the gap between buttons */
+    }
+
+    /* Adjust map container position to accommodate the header/banner */
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      overflow: hidden; /* Prevent scrolling when the map is dragged */
+    }
+
+    /* Optionally, add some animation to the banner */
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    header {
+      animation: fadeInDown 0.5s ease-in-out; /* Add animation to the header/banner */
+    }
+
+    /* Hover effect for the home button */
+    #home-button:hover {
+      background-color: #593a27; /* Darken the background color on hover */
     }
   </style>
 </head>
+
 <body>
+  <!-- Header/banner -->
+  <header>
+    <div id="home-button" onclick="goToHome()">Home</div>
+    <div id="sherlock-text">Sherlock's Literary London</div>
+    <div class="custom-zoom-control" id="custom-zoom-control"></div>
+  </header>
+
   <!-- The map container -->
   <div id="map"></div>
-
-  <!-- Home button -->
-  <div id="home-button" onclick="goToHome()">Home</div>
 
   <!-- Include Leaflet JavaScript -->
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
@@ -49,4 +110,5 @@
   <!-- Your custom JavaScript file -->
   <script src="map.js"></script>
 </body>
+
 </html>

@@ -129,7 +129,7 @@ const locations = [
     },
     zoom: 16, // Zoom level for found location
     initial: false, // Whether the search bar is initially expanded
-    textPlaceholder: 'Search places, people, stories...', // Custom placeholder text
+    textPlaceholder: 'Search people, places, stories...', // Custom placeholder text
     textErr: 'Location Not Found', // Custom error message
     collapsed: false, // Always expand the search bar
     position: 'topright', // Position the search bar in the top right corner
