@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sherlock Holmes Map</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap">
   <style>
     body {
       background-image: url('images/bg_1.jpg');
@@ -11,7 +13,7 @@
       background-position: center;
       background-repeat: no-repeat;
       color: #5C3A21;
-      font-family: 'Times New Roman', serif;
+      font-family: 'Lato', sans-serif;
       margin: 0;
       padding: 0;
       display: flex;
@@ -23,8 +25,14 @@
 
     h1 {
       text-align: center;
-      font-size: 36px;
+      font-size: 56px; /* Adjust the font size as needed */
       margin: 20px 0;
+      position: absolute; /* Initial position */
+      top: 50%; /* Initial position */
+      left: 50%; /* Initial position */
+      transform: translate(-50%, -50%); /* Initial position */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      animation: titleAnimation 3s ease-in-out forwards;
     }
 
     p {
@@ -33,19 +41,33 @@
       margin: 10px;
       font-size: 18px;
       line-height: 1.6;
+      animation: textAnimation 4s ease-in-out forwards;
     }
 
-    /* Larger button size */
+    /* Style for the button */
     a button {
       font-size: 24px;
       padding: 15px 30px;
       margin-top: 20px;
+      background-color: #6b8e23; /* Olive Green background color */
+      color: white; /* White text color */
+      border: none; /* No border */
+      border-radius: 8px; /* Rounded corners */
+      cursor: pointer; /* Cursor on hover */
+      transition: background-color 0.3s ease;
+      animation: buttonAnimation 4s ease-in-out forwards;
     }
 
-    /* Quotes section */
+    /* Change button color on hover */
+    a button:hover {
+      background-color: #556b2f; /* Darker Olive Green on hover */
+    }
+
+
     .quotes {
       text-align: center;
       margin-top: 20px;
+      animation: quotesAnimation 4s ease-in-out forwards;
     }
 
     .quote {
@@ -53,23 +75,88 @@
       font-size: 20px;
       margin-bottom: 10px;
     }
+
+    /* Add a class to apply the animation */
+    .title-animation {
+      animation: titleAnimation 3s forwards;
+    }
+
+    @keyframes titleAnimation {
+      0% {
+        font-size: 56px; /* Initial font size */
+        top: 50%; /* Initial position */
+        transform: translate(-50%, -50%); /* Initial position */
+        white-space: nowrap; /* Prevent line breaks */
+        transform-origin: 50% 50%; /* Set transform origin to center */
+      }
+      25% {
+        font-size: 56px; /* Initial font size */
+        top: 50%; /* Initial position */
+        transform: translate(-50%, -50%); /* Initial position */
+        white-space: nowrap; /* Prevent line breaks */
+        transform-origin: 50% 50%; /* Set transform origin to center */
+      }
+      100% {
+        font-size: 56px; /* Final font size */
+        top: 60px; /* Final position from the top */
+        transform: translate(-50%, 0); /* Final position */
+        white-space: nowrap; /* Prevent line breaks */
+        transform-origin: 50% 0; /* Set transform origin to top center */
+      }
+    }
+
+
+
+
+
+
+    @keyframes textAnimation {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes buttonAnimation {
+      0% {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes quotesAnimation {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
   </style>
 </head>
+
 <body>
   <h1>Sherlock's Literary London</h1>
-  <p>Welcome Sherlock enthusiasts or anyone that stops by!</p>
-  <p>
-    Here we provide a Sherlock map of London, where you could explore 
-     the locations that Sherlock Holmes, and of course Dr. Watson used 
-     to wander around!
-  </p>
-
-  <p>
-    Curious about what the real scenes look like? You came to the right place!
-  </p>
-
-  <p>
-    Want to know more about the crimes? You may gain the first-hand info from the witnesses and policemen on the scene!
+  <p>Embark on a captivating journey through the pages of Sherlock Holmes' adventures as we unveil 
+    the literary tapestry of London. Immerse yourself in the rich narrative, explore iconic locations, 
+    and unlock the mysteries of the city where Holmes and Watson left their indelible mark. Unveil the 
+    secrets of Sherlock's Literary London, where every street corner echoes with tales of deduction, 
+    intrigue, and timeless detective brilliance!
   </p>
 
   <!-- Sherlock Holmes Quotes -->
@@ -85,4 +172,5 @@
 
   <!-- Your additional homepage content goes here if needed -->
 </body>
+
 </html>

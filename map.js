@@ -2,7 +2,7 @@
 const londonBounds = [
     [51.2867602, -0.5103759], // Southwest
     [51.6918741, 0.3340155],  // Northeast
-  ];
+];
   
   // Initialize Leaflet map with both zoom buttons and mouse wheel zoom enabled
   const map = L.map("map", {
@@ -21,15 +21,16 @@ const londonBounds = [
   // Add a rectangle to represent London bounds on the map
   L.rectangle(londonBounds, { color: "#008000", weight: 8, fillOpacity: 0 }).addTo(map);
   
-  // Example location data for Sherlock Holmes project
-  const locations = [
+// Example location data for Sherlock Holmes project
+const locations = [
     {
       name: "Baker Street",
       coordinates: [51.5238, -0.1588],
+      address: "221b Baker St, Marylebone, London NW1 6XE",
       description: "Sherlock Holmes' famous address",
       story: "The Adventures of Sherlock Holmes",
-      historicalSignificance: "Historically significant information here.",
-      novelsSignificance: "Information about the significance in novels here.",
+      historicalSignificance: "221B Baker Street is the London address of the fictional detective Sherlock Holmes. Baker Street in the late 19th century was a high-class residential district, and Holmes's apartment would probably have been part of a Georgian terrace. ",
+      novelsSignificance: "The residence was introduced in the novel A Study in Scarlet (1887). At the time the Holmes stories were published, addresses in Baker Street did not go as high as 221. Baker Street was later extended, and in 1932 the Abbey National Building Society moved into premises at 219–229 Baker Street.",
       realWorldImages: ["images/1_baker.jpg"],
     },
     {
@@ -105,6 +106,7 @@ const londonBounds = [
       marker = new L.Marker(new L.LatLng(...loc), { title: title }); // Set property searched
     marker.bindPopup(`
       <h3>${location.name}</h3>
+      <p><strong>Address:</strong> ${location.address}</p>
       <p><strong>Description:</strong> ${location.description}</p>
       <p><strong>Story:</strong> ${location.story}</p>
       <p><strong>Historical Significance:</strong> ${location.historicalSignificance}</p>
