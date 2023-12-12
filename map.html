@@ -94,6 +94,40 @@
       border: 1px solid #ccc;
     }
 
+    .popup-content {
+      display: flex;
+    }
+
+    .popup-text {
+      flex: 1;
+      padding-right: 10px;
+    }
+
+    .popup-image {
+      flex-shrink: 0;
+    }
+
+    .leaflet-popup-content {
+      max-width: 700px !important;
+      width: 700px !important;
+      height: 300px;
+      overflow-y: scroll;
+    } 
+
+    .popup-content {
+      display: flex;
+    }
+
+    .popup-text {
+      flex: 1;
+      padding-right: 10px;
+    }
+
+    .popup-image {
+      flex-shrink: 0;
+    }
+
+
     
 
 
@@ -139,10 +173,10 @@
     <div class="legend-marker" style="background-color: #2e539e;"></div>
     <span>Location</span>
   </div>
-  <div class="legend-item">
+  <!-- <div class="legend-item">
     <div class="legend-marker" style="background-color: #cf3b3b;"></div>
     <span>Crime Scene</span>
-  </div>
+  </div> -->
   <div class="legend-item">
     <div class="legend-marker"><img src="https://www.svgrepo.com/show/35009/policeman.svg" alt="Police Man" width="20" height="20"></div>
     <span>Police Man</span>
