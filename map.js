@@ -25,6 +25,9 @@ const markersLayer = new L.FeatureGroup(); // Layer containing searched elements
 // Create location markers and connect with polylines
 let previousColor; // Variable to store the color of the previous location
 
+// Create location markers and connect with polylines on marker click
+const locationMarkers = [];
+
 locations.forEach((location, index) => {
   const title = location.name,
     loc = location.coordinates,
@@ -60,26 +63,33 @@ locations.forEach((location, index) => {
     </div>
   `);
 
+  marker.on('click', () => {
+    connectMarkers(location.colour);
+  });
+
   markersLayer.addLayer(marker);
-
-  // Check if it's a crime scene and add an icon of a magnifying glass
-  if (location.crimeScene) {
-    const magnifyingGlassIcon = L.divIcon({
-      className: 'crime-scene-icon',
-      html: '<img src="https://www.svgrepo.com/show/438667/magnifying-glass-round.svg" alt="Magnifying Glass" style="width: 25px; height: 25px;">'
-    });
-    const magnifyingGlassMarker = new L.Marker(new L.LatLng(...loc), { icon: magnifyingGlassIcon });
-    markersLayer.addLayer(magnifyingGlassMarker);
-  }
-
-  // if (index > 0 && location.colour === previousColor) {
-  //   // Connect to the previous location with a Polyline only if the colour is the same
-  //   const prevLoc = locations[index - 1].coordinates;
-  //   const polyline = L.polyline([loc, prevLoc], { color: location.colour }).addTo(map);
-  // }
-
-  previousColor = location.colour; // Update the previousColor for the next iteration
+  locationMarkers.push(marker);
 });
+
+// Function to connect markers with polylines
+function connectMarkers(colour) {
+  const markersToConnect = locationMarkers.filter(marker => marker.options.icon.options.iconUrl.includes(colour));
+
+  // Remove existing polylines
+  map.eachLayer(layer => {
+    if (layer instanceof L.Polyline) {
+      map.removeLayer(layer);
+    }
+  });
+
+  // Connect markers with a Polyline
+  for (let i = 0; i < markersToConnect.length - 1; i++) {
+    const currentLoc = markersToConnect[i].getLatLng();
+    const nextLoc = markersToConnect[i + 1].getLatLng();
+    const polyline = L.polyline([currentLoc, nextLoc], { color: colour }).addTo(map);
+  }
+}
+
 
 
 
