@@ -67,6 +67,16 @@ locations.forEach((location, index) => {
     connectMarkers(location.colour);
   });
 
+    // Check if it's a crime scene and add an icon of a magnifying glass
+    if (location.crimeScene) {
+      const magnifyingGlassIcon = L.divIcon({
+        className: 'crime-scene-icon',
+        html: '<img src="https://www.svgrepo.com/show/438667/magnifying-glass-round.svg" alt="Magnifying Glass" style="width: 25px; height: 25px;">'
+      });
+      const magnifyingGlassMarker = new L.Marker(new L.LatLng(...loc), { icon: magnifyingGlassIcon });
+      markersLayer.addLayer(magnifyingGlassMarker);
+    }
+
   markersLayer.addLayer(marker);
   locationMarkers.push(marker);
 });
