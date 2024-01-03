@@ -42,6 +42,7 @@ const locations = [
     story: "The Lauriston Gardens Mystery",
     novelsSignificance: "Audley Court was not an attractive locality. The narrow passage led us into a quadrangle paved with flags and lined by sordid dwellings. We picked our way among groups of dirty children, and through lines of discoloured linen, until we came to Number 46, the door of which was decorated with a small slip of brass on which the name Rance was engraved.",
     realWorldImages: ["images/1_audley.png", "images/2_audley.png"],
+    crimeScene: true,
   },
   // Add more locations...
   {
@@ -53,6 +54,7 @@ const locations = [
     story: "The Sign of the Four",
     novelsSignificance: "Pondicherry Lodge had been purchased by Major Sholto who had hidden the Agra treasure there in an upstairs attic. It is where Bartholomew Sholto was murdered, and from where Jonathan Small and Togo took the treasure.",
     realWorldImages: [], // Add images if available
+    crimeScene: true,
   },
   {
     name: "Pinchin Lane",

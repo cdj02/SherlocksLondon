@@ -12,7 +12,7 @@ const map = L.map("map", {
 map.setMaxBounds(londonBounds);
 
 // Add a tile layer
-L.tileLayer("https://tiles.stadiamaps.com/tiles/stamen_terrain/{z}/{x}/{y}{r}.png", { // https://tiles.stadiamaps.com/tiles/stamen_terrain/{z}/{x}/{y}{r}.{ext}
+L.tileLayer("https://{s}.tile.thunderforest.com/pioneer/{z}/{x}/{y}.png?apikey=f7226a08ffd84ab6812aba6025bdaecf", { // https://tiles.stadiamaps.com/tiles/stamen_terrain/{z}/{x}/{y}{r}.{ext}
   attribution: "© OpenStreetMap contributors",
 }).addTo(map);
 
@@ -64,19 +64,23 @@ locations.forEach((location, index) => {
 
   // Check if it's a crime scene and add an icon of a magnifying glass
   if (location.crimeScene) {
-    const magnifyingGlassIcon = L.divIcon({ className: 'crime-scene-icon', html: '🔍' });
+    const magnifyingGlassIcon = L.divIcon({
+      className: 'crime-scene-icon',
+      html: '<img src="https://www.svgrepo.com/show/438667/magnifying-glass-round.svg" alt="Magnifying Glass" style="width: 25px; height: 25px;">'
+    });
     const magnifyingGlassMarker = new L.Marker(new L.LatLng(...loc), { icon: magnifyingGlassIcon });
     markersLayer.addLayer(magnifyingGlassMarker);
   }
 
-  if (index > 0 && location.colour === previousColor) {
-    // Connect to the previous location with a Polyline only if the colour is the same
-    const prevLoc = locations[index - 1].coordinates;
-    const polyline = L.polyline([loc, prevLoc], { color: location.colour }).addTo(map);
-  }
+  // if (index > 0 && location.colour === previousColor) {
+  //   // Connect to the previous location with a Polyline only if the colour is the same
+  //   const prevLoc = locations[index - 1].coordinates;
+  //   const polyline = L.polyline([loc, prevLoc], { color: location.colour }).addTo(map);
+  // }
 
   previousColor = location.colour; // Update the previousColor for the next iteration
 });
+
 
 
 
