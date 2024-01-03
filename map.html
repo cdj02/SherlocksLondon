@@ -53,8 +53,13 @@
       color: #4d301e; /* Adjust the color as needed */
       font-size: 24px;
       font-weight: bold;
-      margin-right: 1025px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); /* Center the text both horizontally and vertically */
     }
+
+
 
     /* Custom Zoom Control */
     .custom-zoom-control {
@@ -138,7 +143,7 @@
 
     .crime-scene-icon {
       font-size: 30px;
-      color: red; /* You can adjust the color as needed */
+      color: red;
     }
 
 
@@ -165,6 +170,18 @@
     }
   </style>
 </head>
+
+
+
+<script>
+// Home button functionality
+function goToHome() {
+  // Navigate to the index.html page
+  window.location.href = 'index.html';
+}
+</script>
+
+
 
 <body>
   <!-- Header/banner -->

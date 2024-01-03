@@ -178,6 +178,13 @@ const crimeScenes = [
     portrait: "images/police_rance.png",
     description: "“Where was you hid to see all that?” he cried. “It seems to me that you knows a deal more than you should.”",
   },
+  {
+    name: "Mrs. Bernstone",
+    coordinates: [51.3768, -0.0988],
+    type: "witness",
+    portrait: "images/police_rance.png",
+    description: "“I have seen Mr. Bartholomew Sholto in joy and in sorrow for ten long years, but I never saw him with such a face on him as that”",
+  },
   // Add more crime scenes...
 ];
 

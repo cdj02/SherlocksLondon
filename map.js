@@ -179,11 +179,6 @@ map.on('zoomend', () => {
   });
 });
 
-// Home button functionality
-function goToHome() {
-  // Navigate to the index.html page
-  window.location.href = 'index.html';
-}
 
 // Create the legend control
 const legend = L.control({ position: 'topright' });
