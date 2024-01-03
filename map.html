@@ -91,6 +91,13 @@
 
     .legend-marker {
       width: 20px;
+      height: 30px;
+      margin-right: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .legend-icon {
+      width: 20px;
       height: 20px;
       margin-right: 5px;
       border: 1px solid #ccc;
@@ -174,20 +181,33 @@
   <div id="legend">
     <h4>Legend</h4>
     <div class="legend-item">
-      <div class="legend-marker" style="background-color: #2e539e;"></div>
-      <span>Location</span>
+      <div class="legend-marker"><img src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png" alt="The Lauriston Gardens Mystery" width="20" height="30"></div>
+      <span>The Lauriston Gardens Mystery</span>
     </div>
-    <!-- <div class="legend-item">
-      <div class="legend-marker" style="background-color: #cf3b3b;"></div>
-      <span>Crime Scene</span>
-    </div> -->
     <div class="legend-item">
-      <div class="legend-marker"><img src="https://www.svgrepo.com/show/35009/policeman.svg" alt="Police Man" width="20" height="20"></div>
+      <div class="legend-marker"><img src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png" alt="The Sign of the Four" width="20" height="30"></div>
+      <span>The Sign of the Four</span>
+    </div>
+    <div class="legend-item">
+      <div class="legend-marker"><img src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-gold.png" alt="The Yellow Face" width="20" height="30"></div>
+      <span>The Yellow Face</span>
+    </div>
+    <div class="legend-item">
+      <div class="legend-marker"><img src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-black.png" alt="The Engineer's Thumb" width="20" height="30"></div>
+      <span>The Engineer's Thumb</span>
+    </div>
+
+    <div class="legend-item">
+      <div class="legend-icon"><img src="https://www.svgrepo.com/show/35009/policeman.svg" alt="Police Man" width="20" height="20"></div>
       <span>Police Man</span>
     </div>
     <div class="legend-item">
-      <div class="legend-marker"><img src="https://www.svgrepo.com/show/34968/maid.svg" alt="Witness" width="20" height="20"></div>
+      <div class="legend-icon"><img src="https://www.svgrepo.com/show/34968/maid.svg" alt="Witness" width="20" height="20"></div>
       <span>Witness</span>
+    </div>
+    <div class="legend-item">
+      <div class="legend-icon"><img src="https://www.svgrepo.com/show/438667/magnifying-glass-round.svg" alt="Crime Scene" width="20" height="20"></div>
+      <span>Crime Scene</span>
     </div>
     <!-- Add more legend items as needed -->
   </div>
