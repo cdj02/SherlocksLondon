@@ -1,3 +1,5 @@
+<!-- map.html -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -127,8 +129,10 @@
       flex-shrink: 0;
     }
 
-
-    
+    .crime-scene-icon {
+      font-size: 20px;
+      color: red; /* You can adjust the color as needed */
+    }
 
 
     /* Optionally, add some animation to the banner */
@@ -166,36 +170,34 @@
   <!-- The map container -->
   <div id="map"></div>
 
-<!-- Legend -->
-<div id="legend">
-  <h4>Legend</h4>
-  <div class="legend-item">
-    <div class="legend-marker" style="background-color: #2e539e;"></div>
-    <span>Location</span>
+  <!-- Legend -->
+  <div id="legend">
+    <h4>Legend</h4>
+    <div class="legend-item">
+      <div class="legend-marker" style="background-color: #2e539e;"></div>
+      <span>Location</span>
+    </div>
+    <!-- <div class="legend-item">
+      <div class="legend-marker" style="background-color: #cf3b3b;"></div>
+      <span>Crime Scene</span>
+    </div> -->
+    <div class="legend-item">
+      <div class="legend-marker"><img src="https://www.svgrepo.com/show/35009/policeman.svg" alt="Police Man" width="20" height="20"></div>
+      <span>Police Man</span>
+    </div>
+    <div class="legend-item">
+      <div class="legend-marker"><img src="https://www.svgrepo.com/show/34968/maid.svg" alt="Witness" width="20" height="20"></div>
+      <span>Witness</span>
+    </div>
+    <!-- Add more legend items as needed -->
   </div>
-  <!-- <div class="legend-item">
-    <div class="legend-marker" style="background-color: #cf3b3b;"></div>
-    <span>Crime Scene</span>
-  </div> -->
-  <div class="legend-item">
-    <div class="legend-marker"><img src="https://www.svgrepo.com/show/35009/policeman.svg" alt="Police Man" width="20" height="20"></div>
-    <span>Police Man</span>
-  </div>
-  <div class="legend-item">
-    <div class="legend-marker"><img src="https://www.svgrepo.com/show/34968/maid.svg" alt="Witness" width="20" height="20"></div>
-    <span>Witness</span>
-  </div>
-  <!-- Add more legend items as needed -->
-</div>
-
-
 
   <!-- Include Leaflet JavaScript -->
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <!-- Include leaflet-search JavaScript -->
   <script src="https://unpkg.com/leaflet-search/dist/leaflet-search.min.js"></script>
   <!-- Your custom JavaScript file -->
-  <script src="map.js"></script>
+  <script type="module" src="map.js"></script>
 </body>
 
 </html>
