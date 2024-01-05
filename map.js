@@ -22,9 +22,6 @@ L.rectangle(londonBounds, { color: "#008000", weight: 8, fillOpacity: 0 }).addTo
 // Example location data
 const markersLayer = new L.FeatureGroup(); // Layer containing searched elements
 
-// Create location markers and connect with polylines
-let previousColor; // Variable to store the color of the previous location
-
 // Create location markers and connect with polylines on marker click
 const locationMarkers = [];
 
@@ -45,7 +42,7 @@ locations.forEach((location, index) => {
       })
     });
 
-  marker.bindPopup(`
+    marker.bindPopup(`
     <div class="popup-content">
       <div class="popup-text">
         <h3>${location.name}</h3>
@@ -53,12 +50,15 @@ locations.forEach((location, index) => {
         <p><strong>Description:</strong> ${location.description}</p>
         <p><strong>Story:</strong> ${location.story}</p>
         <p><strong>Novels Significance:</strong> ${location.novelsSignificance}</p>
+        ${location.link ? `<p><a href="${location.link}" target="_blank">Click here to read the original story!</a></p>` : ''}
       </div>
       <div class="popup-image">
-        <p><strong>Real World Images:</strong></p>
-        <ul>
-          ${location.realWorldImages.map(image => `<li><img src="${image}" alt="Image" style="max-width:100%; max-height:200px;"></li>`).join('')}
-        </ul>
+        <p><strong>Images:</strong></p>
+        <div style="list-style: none; padding: 0; margin: 0;">
+          <ul style="list-style: none; padding: 0; margin: 0;">
+            ${location.realWorldImages.map(image => `<li style="list-style: none; padding: 0; margin: 0;"><img src="${image}" alt="Image" style="max-width:200px; max-height:200px; min-width:200px; min-height:200px;"></li>`).join('')}
+          </ul>
+        </div>
       </div>
     </div>
   `);
@@ -99,10 +99,6 @@ function connectMarkers(colour) {
     const polyline = L.polyline([currentLoc, nextLoc], { color: colour }).addTo(map);
   }
 }
-
-
-
-
 
 
 // Example crime scene data

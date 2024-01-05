@@ -17,6 +17,7 @@ const locations = [
     story: "The Lauriston Gardens Mystery",
     novelsSignificance: "The residence was introduced in the novel A Study in Scarlet (1887). At the time the Holmes stories were published, addresses in Baker Street did not go as high as 221. Baker Street was later extended, and in 1932 the Abbey National Building Society moved into premises at 219–229 Baker Street.",
     realWorldImages: ["images/1_baker.jpg"],
+    link: "https://sherlock-holm.es/stories/pdf/a4/2-sided/stud.pdf",
   },
   {
     name: "3 Lauriston Gardens",
@@ -32,6 +33,7 @@ const locations = [
       "images/lauriston_gardens_3.jpg",
     ],
     crimeScene: true,
+    link: "https://sherlock-holm.es/stories/pdf/a4/2-sided/stud.pdf",
   },
   {
     name: "Aulton Place",
@@ -41,8 +43,9 @@ const locations = [
     description: "the place where the first witness, also the policeman John Rance lived.",
     story: "The Lauriston Gardens Mystery",
     novelsSignificance: "Audley Court was not an attractive locality. The narrow passage led us into a quadrangle paved with flags and lined by sordid dwellings. We picked our way among groups of dirty children, and through lines of discoloured linen, until we came to Number 46, the door of which was decorated with a small slip of brass on which the name Rance was engraved.",
-    realWorldImages: ["images/1_audley.png", "images/2_audley.png"],
+    realWorldImages: ["images/1_audley.png", "images/2_audley.png"], 
     crimeScene: true,
+    link: "https://sherlock-holm.es/stories/pdf/a4/2-sided/stud.pdf",
   },
   // Add more locations...
   {
@@ -53,8 +56,9 @@ const locations = [
     description: "A huge clump of a house, square and prosaic, all plunged in shadow save where a moon-beam struck one corner and glimmered in a garret window.",
     story: "The Sign of the Four",
     novelsSignificance: "Pondicherry Lodge had been purchased by Major Sholto who had hidden the Agra treasure there in an upstairs attic. It is where Bartholomew Sholto was murdered, and from where Jonathan Small and Togo took the treasure.",
-    realWorldImages: [], // Add images if available
+    realWorldImages: ["images/story2-place1.png"], // Add images if available
     crimeScene: true,
+    link: "https://sherlock-holm.es/stories/html/sign.html",
   },
   {
     name: "Pinchin Lane",
@@ -64,7 +68,8 @@ const locations = [
     description: "A row of shabby two-storied brick houses",
     story: "The Sign of the Four",
     novelsSignificance: "Watson visited this place where Mr. Sherman lived to borrow his dog Toby.",
-    realWorldImages: [], // Add images if available
+    realWorldImages: ["images/story2-place2.png"], // Add images if available
+    link: "https://sherlock-holm.es/stories/html/sign.html",
   },
   {
     name: "Small Wooden Wharf",
@@ -75,6 +80,7 @@ const locations = [
     story: "The Sign of the Four",
     novelsSignificance: "Mrs.Smith (one of the criminals’ wife): 'Besides, I don’t like that wooden-legged man, wi’ his ugly face and out-landish talk.'",
     realWorldImages: [], // Add images if available
+    link: "https://sherlock-holm.es/stories/html/sign.html",
   },
   {
     name: "Thames River",
@@ -84,6 +90,7 @@ const locations = [
     story: "The Sign of the Four",
     novelsSignificance: "Sherlock and Watson were chasing the Aurora boat where all the criminals, Jonathan Small, the Smiths, and the black man Tonga were. Sherlock and Watson shot Tonga to death and barely missed the attack from the Tonga.",
     realWorldImages: [], // Add images if available
+    link: "https://sherlock-holm.es/stories/html/sign.html",
   },
   {
     name: "Mrs. Cecil Forrester's",
@@ -93,7 +100,8 @@ const locations = [
     description: "Where Mary Morstan, the main character of this story lived. She worked as a tutor here and later became the wife of Watson. Watson escorted Mary several times back to this place.",
     story: "The Sign of the Four",
     novelsSignificance: "Where Mary Morstan, the main character of this story lived. She worked as a tutor here and later became the wife of Watson. Watson escorted Mary several times back to this place.",
-    realWorldImages: [], // Add images if available
+    realWorldImages: ["images/story2-place5.png"], // Add images if available
+    link: "https://sherlock-holm.es/stories/html/sign.html",
   },
 
   // Add more locations...
@@ -104,8 +112,9 @@ const locations = [
     description: "The cottage where Mr. Munro and his wife, Effie, lived",
     story: "The Yellow Face",
     novelsSignificance: "This is a short story. In Norbury lives Mr. Munro and his wife, Effie. Mr. Munro found that his wife often sneaked into a cottage nearby and it turned out that Effie had a child, who was black because of Effie’s ex-husband. Effie missed the child so much so she let the servant bring the child from America to England to secretly unite. But she was afraid of telling her husband of the fact she had a child and also the child was black.",
-    realWorldImages: ["images/norbury_cottage.jpg", "images/mr_munro_acceptance.jpg"],
+    realWorldImages: ["images/story3-place1.png"],
     colour: "gold", // Add a colour attribute for the marker
+    link: "https://sherlock-holm.es/stories/html/yell.html",
   },
   {
     name: "Secret Reunion Spot",
@@ -114,8 +123,9 @@ const locations = [
     description: "The spot where Effie secretly reunited with her child",
     story: "The Yellow Face",
     novelsSignificance: "Effie secretly reunited with her child in this spot, away from the prying eyes of the society. The reunion was an emotional moment for Effie, and the secrecy added to the complexity of the story.",
-    realWorldImages: ["images/reunion_spot.jpg"],
+    realWorldImages: ["images/story3-place1_2.jpg"],
     colour: "gold", // Use the same colour as the main location
+    link: "https://sherlock-holm.es/stories/html/yell.html",
   },
   // Add more locations...
   {
@@ -125,8 +135,9 @@ const locations = [
     description: "The residence of Victor Hatherley",
     story: "The Engineer's Thumb",
     novelsSignificance: "Victor Hatherley visits Holmes with a strange story involving a hydraulic press and a severed thumb. The case takes them to this address, where the bizarre incident occurred.",
-    realWorldImages: ["images/engineers_thumb_residence.jpg"],
+    realWorldImages: ["images/s4_p1.png"],
     colour: "black", // Use the same colour as the main location
+    link: "https://sherlock-holm.es/stories/html/engr.html",
   },
   {
     name: "Tredannick Wartha",
@@ -135,8 +146,9 @@ const locations = [
     description: "The country house where the hydraulic press incident took place",
     story: "The Engineer's Thumb",
     novelsSignificance: "The country house in Cornwall where the strange incident with the hydraulic press and the severed thumb occurred. Holmes and Watson investigate the details of this peculiar case.",
-    realWorldImages: ["images/tredannick_wartha.jpg"],
+    realWorldImages: ["images/s4_p2.jpg"],
     colour: "black", // Add a colour attribute for the marker
+    link: "https://sherlock-holm.es/stories/html/engr.html",
   },
   {
     name: "Stoke Moran",
@@ -145,10 +157,10 @@ const locations = [
     description: "The final confrontation with the villains",
     story: "The Engineer's Thumb",
     novelsSignificance: "Holmes and Watson track down the criminals to Stoke Moran, near London, where the final confrontation takes place. The story reaches its climax as the mystery unfolds.",
-    realWorldImages: ["images/stoke_moran.jpg"],
+    realWorldImages: ["images/s4_p3.png"],
     colour: "black", // Use the same colour as the main location
+    link: "https://sherlock-holm.es/stories/html/engr.html",
   },
-
 
 ];
 
@@ -182,7 +194,7 @@ const crimeScenes = [
     name: "Mrs. Bernstone",
     coordinates: [51.3768, -0.0988],
     type: "witness",
-    portrait: "images/police_rance.png",
+    portrait: "images/story2-place1-witness.png",
     description: "“I have seen Mr. Bartholomew Sholto in joy and in sorrow for ten long years, but I never saw him with such a face on him as that”",
   },
   // Add more crime scenes...
